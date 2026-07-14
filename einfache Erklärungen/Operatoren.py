@@ -35,3 +35,14 @@ var1 = 3
 #var1 //= 2
 var1 **= 3
 print(var1)
+
+# Vergleichsoperatoren
+
+print(type(2 < 4))
+print(2 < 4)
+print(2>4)
+print(2 >= 4)
+print(4 >= 4)
+print(4 == 5)
+print(4 != 5)
+print(5 != 5)
