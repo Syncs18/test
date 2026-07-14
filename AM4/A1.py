@@ -1,0 +1,6 @@
+vname = input()
+nname = input()
+alter = input()
+print("Vorname :", vname)
+print("Nachname: ", nname)
+print("Alter: ",alter)
