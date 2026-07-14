@@ -46,3 +46,10 @@ print(4 >= 4)
 print(4 == 5)
 print(4 != 5)
 print(5 != 5)
+
+# Logische Operatoren => or / and / not
+
+# Bitweise Operatoren
+
+print(6 << 1) # 0000 0110 = 0000 1100
+print(6 & 0xFD)
