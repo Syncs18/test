@@ -22,3 +22,14 @@ def maximum(a, b):
         return a
 
 print(type(maximum(5, 6)))
+
+# Optionale Parameter
+
+def greeting(first_name,mlast_name, academic_title=""):
+    if academic_title != "":
+        academic_title += " "
+    print("Hallo " +academic_title + first_name + " " + mlast_name)
+    print("Schön dass du da bist")
+
+greeting("Dan", "Dan")
+greeting("Don", "Don", "Dr.")
