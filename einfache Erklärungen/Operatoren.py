@@ -55,3 +55,7 @@ print(6 << 1) # 0000 0110 = 0000 1100
 print(6 & 0xFD)
 print(6 | 0x01)
 print(6 ^ 0x0F)
+
+# Operatoren Reihenfolge
+
+print(3 + 2**2)
