@@ -33,3 +33,23 @@ def greeting(first_name,mlast_name, academic_title=""):
 
 greeting("Dan", "Dan")
 greeting("Don", "Don", "Dr.")
+
+# Schlüsselwort Parameter
+
+greeting(academic_title="Dr.", first_name="Dan", mlast_name="Dan")
+
+def multiply (number1 , number2, *numbers):
+    sum= number1 * number2
+    for i in numbers:
+        sum *= i
+    return sum
+
+multiply(2,3,4,5)
+
+# Reine Schlüsselwortparameter
+
+print("Test",end=", ")
+print("siehst du")
+
+print("test", "siehst du", "d", "u", sep="-")
+
