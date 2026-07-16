@@ -48,4 +48,5 @@ dog.move_fast()
 tiger.move_fast()
 owl = Owl("Eule", 20, "red", "Wurm",7)
 owl.sleep()
+print(owl.hunting_instinct)
 
