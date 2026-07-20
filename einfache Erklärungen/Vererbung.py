@@ -79,4 +79,48 @@ class Teacher(Person, Employee):
 teacher = Teacher("Max", "Mustermann", 31, 12)
 print(teacher.fname)
 
+#Klassenattribute
 
+class Person2:
+    counter = 0
+
+    def __init__(self, fname, nname, age):
+        self.fname = fname
+        self.nname = nname
+        self.age = age
+        Person2.counter += 1
+
+    def print_details(self):
+        print(self.fname + " " + self.nname + " " + self.age)
+
+p1 = Person2( "Max", "Mustermann", 31)
+p2 = Person2( "Ma", "Muster", 30)
+print(p1.counter)
+print(Person2.counter)
+
+# Statische Methoden
+
+class Math:
+    @staticmethod
+    def multiply ( a,b):
+        return a*b
+
+
+print(Math.multiply(2,3))
+
+import math
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    def area(self):
+        return math.pi * self.radius**2
+    @staticmethod
+    def convert_area_in_radius(area):
+        return math.sqrt(area/math.pi)
+
+c=Circle(3)
+c2 = Circle(Circle.convert_area_in_radius(80))
+print(c2.area())
+
+print(Circle.convert_area_in_radius(c.area()))
