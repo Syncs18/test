@@ -111,16 +111,45 @@ print(Math.multiply(2,3))
 import math
 
 class Circle:
+    counter = 0
     def __init__(self, radius):
         self.radius = radius
+        Circle.counter += 1
     def area(self):
         return math.pi * self.radius**2
     @staticmethod
     def convert_area_in_radius(area):
         return math.sqrt(area/math.pi)
+    @classmethod
+    def from_area(cls, area):
+        r = math.sqrt(area / math.pi)
+        return cls(r)
+
+    @classmethod
+    def print_counter(cls):
+        print(Circle.counter)
+
+class Rim(Circle):
+    pass
+
+
 
 c=Circle(3)
 c2 = Circle(Circle.convert_area_in_radius(80))
 print(c2.area())
+Circle.print_counter()
 
 print(Circle.convert_area_in_radius(c.area()))
+c3 = Circle.from_area(70)
+print(c3.area())
+rim = Rim.from_area(20)
+
+
+
+
+
+
+
+
+
+
