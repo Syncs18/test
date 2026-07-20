@@ -145,11 +145,51 @@ print(c3.area())
 rim = Rim.from_area(20)
 
 
+# Property Attribute
+
+class Circle2:
+    counter = 0
+    def __init__(self, radius):
+        self._radius = radius
+        Circle.counter += 1
+    def area(self):
+        return math.pi * self._radius**2
+
+    @property
+    def radius(self):
+        return self._radius
+
+    @radius.setter
+    def radius(self,radius):
+        if radius >= 0:
+            self._radius = radius
+
+    def __len__(self):
+        return self._radius
+
+    def __str__(self):
+        return "Circle(radius=" + str(self._radius) + ")"
+
+    def __call__(self):
+        print("eine instanz kann als funktion aufgerufen werden")
+
+    #def get_radius(self):
+     #   return self._radius
+
+    #def set_radius(self, radius):
+      #  if radius>=0:
+      #      self._radius = radius
 
 
+i = Circle2(3)
+print(i.area())
+print(i.radius)
+i.radius = 10
 
-
-
+test_list = [1,3,5,6]
+print(len(i))
+print(i)
+i()
 
 
 
