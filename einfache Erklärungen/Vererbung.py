@@ -50,3 +50,33 @@ owl = Owl("Eule", 20, "red", "Wurm",7)
 owl.sleep()
 print(owl.hunting_instinct)
 
+#Mehrfach vererbung
+
+class Person:
+    def __init__(self, fname, nname, age):
+        self.fname = fname
+        self.nname = nname
+        self.age = age
+
+    def print_details(self):
+        print(self.fname + " " + self.nname + " " + self.age)
+
+class Employee:
+    def __init__(self, nname, id):
+        self.nname = nname
+        self.id = id
+
+    def print_details(self):
+        print("Mitarbeiter=" +self.nname + ", id=" + str(self.id))
+
+class Teacher(Person, Employee):
+    def __init__(self, fnamen, nname, age, id):
+        Person.__init__(self,fnamen,nname,age)
+        Employee.__init__(self,nname,id)
+
+
+
+teacher = Teacher("Max", "Mustermann", 31, 12)
+print(teacher.fname)
+
+
