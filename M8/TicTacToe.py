@@ -1,3 +1,4 @@
+import random
 
 field = ["",
          "1", "2", "3",
@@ -53,7 +54,32 @@ def change_player():
         active_player = "O"
     else:
         active_player = "X"
+
+def rndstart():
+    n1 = input("Nummer 1 Bitte geben Sie eine Zahl zwischen 1 und 100 ein (Zahlenspektrum optional):")
+    n2 = input("Nummer 2 Bitte geben Sie eine andere Zahl zwischen 1 und 100 ein (Zahlenspektrum optional):")
+    zz = random.randint(1, 100)
+    u1 = zz - int(n1)
+    u2 = zz - int(n2)
+    if u1 < 0:
+        u1 *= -1
+    if u2 < 0:
+        u2 *= -1
+    if u1 > 0 and u2 > 0:
+        if u1 < u2:
+            print("Nummer 1 Sie fangen an als Spieler: X")
+        elif u2 < u1:
+            print("Nummer 2 Sie fangen an als Spieler: X")
+        else:
+            if zz % 2 == 0:
+                print("Nummer 2 Sie fangen an als Spieler: X")
+            else:
+                print("Nummer 1 Bitte geben Sie eine Zahl zwischen 1 und 100 ein (Zahlenspektrum optional):")
+
+rndstart()
+
 while run:
+
     print_field()
     player_move = next_move()
     field[player_move] = active_player
