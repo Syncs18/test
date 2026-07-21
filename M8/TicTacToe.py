@@ -88,7 +88,7 @@ while run:
     if check_win():
         print("Spieler " + winner+ " hat gewonnen")
         run = False
-    if check_win():
+    elif check_win():
         print("Unentschieden")
         run = False
     change_player()
