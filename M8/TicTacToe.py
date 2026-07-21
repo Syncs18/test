@@ -8,9 +8,9 @@ field = ["",
 active_player = "X"
 run = True
 def print_field():
-    print(field[1] + "|" + field[2] + "|" + field[3])
-    print(field[4] + "|" + field[5] + "|" + field[6])
     print(field[7] + "|" + field[8] + "|" + field[9])
+    print(field[4] + "|" + field[5] + "|" + field[6])
+    print(field[1] + "|" + field[2] + "|" + field[3])
 
 def next_move():
     global run
@@ -19,7 +19,7 @@ def next_move():
         if player_move == "q":
             run = False
         if player_move >= 1 and player_move <= 9:
-            if field[player_move] == "X" or field[player_move] == "O":
+            if field[int(player_move)] == "X" or field[int(player_move)] == "O":
                 print("Spielfeld ist bereits belegt bitte wiederholen")
             else:
                 return player_move
@@ -82,11 +82,11 @@ while run:
 
     print_field()
     player_move = next_move()
-    field[player_move] = active_player
+    field[int(player_move)] = active_player
 
     winner = check_win()
     if check_win():
-        print("Spieler " + winner+ " hat gewonnen")
+        print("Spieler " + str(winner)+ " hat gewonnen")
         run = False
     elif check_win():
         print("Unentschieden")
