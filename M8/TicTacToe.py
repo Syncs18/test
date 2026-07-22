@@ -74,7 +74,7 @@ def rndstart():
             if zz % 2 == 0:
                 print("Nummer 2 Sie fangen an als Spieler: X")
             else:
-                print("Nummer 1 Bitte geben Sie eine Zahl zwischen 1 und 100 ein (Zahlenspektrum optional):")
+                print("Nummer 1 Sie fangen an als Spieler: X")
 
 rndstart()
 
